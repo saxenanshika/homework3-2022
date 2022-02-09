@@ -70,14 +70,15 @@ footer a:visited{
 }
 /*****  End Starter Code ****/
 
+/* Requirement 1 code here*/
 nav a{
   text-decoration: none;
-}/* Requirement 1 code here*/
+}
 
+/* Requirement 2 code here*/
 nav a:hover{
   text-decoration: underline wavy;
-}/* Requirement 2 code here*/
-
+}
 
 
 a.skip{
@@ -87,38 +88,34 @@ a.skip{
   transition: left 1s ease-out;
   z-index: 1;
   /* Requirement 3 code here*/
-  left: 500px;
   position: absolute;
+  left: 500px;
+  overflow: hidden;
 }
 
-a.skip:focus{
-  top: 0;
-}
 
+/* Requirement 4 code here*/
 *:focus{
-  border-style: none;
-  border-width: 2px;
+  border-style: solid;
+  border-top-width: 2px;
   border-color: yellow;
-}/* Requirement 4 code here*/
+}
 
 
 .container{
   /* Requirement 5 code here*/
   display: grid;
   grid-template-columns: 1fr 5fr 1fr;
-  grid-template-rows: repeat(5, auto);
-  grid-row-gap: 30px;
+  row-gap: 30px;
 }
-
 
 /* Requirements 6-10 here: */
 .intro{
-  /* The image used */
   background-image: url("../images/header.jpg");
-  color: #DDDDDD;
+  color: #dddddd;
 
   /* Set a specific height */
-  min-height: 400px;
+  height: 400px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -141,14 +138,27 @@ img{
   overflow: hidden;
 }
 
+.about, .about-image{
+  grid-row: 2 / span 1;
+}
+
+.method, .method-image{
+  grid-row: 3 / span 1;
+}
+
+.clients, .clients-image{
+  grid-row: 4 / span 1;
+}
+
+.contact, .contact-image{
+  grid-row: 5 / span 1;
+}
 
 .text{
-  text-align: center;
+  align-self: center;
   max-height: 25vh;
   overflow: scroll;
 }
-
-
 
 @media screen and (min-width: 700px){
   nav{
@@ -156,21 +166,23 @@ img{
     /*Requirement 11*/
     text-align: right;
   }
-  
+
   nav li{
     margin-left: 5%;
     margin-right:0;
   }
 
+  
   /* Requirements 12-15 here: */
-  a.skip:focus{
-    bottom: 20px;
+  a.skip{
     left: 0px;
+    top: 20px;
   }
+
   .container{
     display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
-    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-rows: 300px 300px 300px 300px;
   }
 
   .about, .method, .clients-image, .contact-image{
@@ -180,7 +192,6 @@ img{
   .clients, .contact, .about-image, .method-image{
     grid-column: 2 / span 2;
   }
-
 }
 
 
@@ -205,3 +216,4 @@ img{
     background-attachment: initial;
   }
 }
+
