@@ -111,11 +111,11 @@ a.skip{
 
 /* Requirements 6-10 here: */
 .intro{
-  background-image: url("../images/header.jpg");
-  color: #dddddd;
+  background: url("../images/header.jpg") #dddddd ;
+
 
   /* Set a specific height */
-  height: 400px;
+  min-height: 400px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -143,11 +143,11 @@ img{
 }
 
 .method, .method-image{
-  grid-row: 2 / span 1;
+  grid-row: 3 / span 1;
 }
 
 .clients, .clients-image{
-  grid-row: 3 / span 1;
+  grid-row: 2 / span 1;
 }
 
 .contact, .contact-image{
@@ -190,7 +190,7 @@ img{
     grid-column: 3 / span 2;
   }
 
-  .clients, .contact, .about-image, .method-image{
+  .about-image, .method-image, .clients, .contact {
     grid-column: 2 / span 2;
   }
 
